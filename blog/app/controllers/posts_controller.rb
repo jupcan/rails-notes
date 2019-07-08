@@ -8,14 +8,37 @@ class PostsController < ApplicationController
   end
 
   def new
-
+    @post=Post.new
   end
 
   def create
     #render plain: params[:post].inspect
     @post=Post.new(post_params)
-    @post.save
-    redirect_to @post
+    if(@post.save)
+      redirect_to @post
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    show
+  end
+
+  def update
+    show
+    if(@post.update(post_params))
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    show
+    @post.delete
+    redirect_to posts_path
+
   end
 
     private def post_params

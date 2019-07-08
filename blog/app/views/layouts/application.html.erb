@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>notes</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to "notes", home_path, class: 'navbar-brand' %>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="<%= 'nav-item active' if current_page?(new_post_path) %>"><%= link_to "create note", new_post_path, class: 'nav-link' %></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

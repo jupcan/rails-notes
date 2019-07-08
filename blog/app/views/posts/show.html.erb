@@ -1,2 +1,5 @@
+<br>
 <h2><%=@post.title%></h2>
 <p><%=@post.body%></p>
+<hr>
+<%= link_to "edit",edit_post_path(@post),:class=>'btn btn-outline-info' %>

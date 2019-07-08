@@ -1,5 +1,18 @@
-<h1>blog posts</h1>
-<%@posts.each do |k|%>
-<h3><%=k.title%></h3>
-<p><%=k.body%></p>
-<%end%>
+<br>
+<% @posts.in_groups_of(4, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |k| %>
+      <div class='col-sm-6'>
+        <div class="card bg-light border-info mb-3">
+          <div class="card-body">
+            <h4 class="card-title"><%=k.title%></h4>
+            <p class="card-text"><%=k.body%></p>
+            <%= link_to "read more",post_path(k),:class=>'btn btn-outline-info'%>
+            <%= link_to "delete",post_path(k),method: :delete,data:{confirm:'are you sure?'},:class=>'btn btn-outline-info' %>
+          </div>
+        </div>
+        <br>
+      </div>
+    <% end %>
+  </div>
+<% end %>
