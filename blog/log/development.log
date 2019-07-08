@@ -5324,3 +5324,636 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2019-07-08 21:25:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/11" for ::1 at 2019-07-08 21:25:25 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/11/edit" for ::1 at 2019-07-08 21:25:26 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+Filter chain halted as #<Proc:0x00007f3a8c50ed30@/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/11/edit" for ::1 at 2019-07-08 21:25:31 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/11" for ::1 at 2019-07-08 21:25:32 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFK5Z37CMrtf48KHlcfqu0aIeG66/E6vtbN/yUCxSLmRJ53YdgZJJYYKmmAznd1caTbcpeBkbdAMFvWfDPAoUQ==", "post"=>{"title"=>"tets", "body"=>"sdfsadf"}, "commit"=>"Save Post", "id"=>"11"}
+Filter chain halted as #<Proc:0x00007f3a8c50ed30@/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/11" for ::1 at 2019-07-08 21:25:32 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFK5Z37CMrtf48KHlcfqu0aIeG66/E6vtbN/yUCxSLmRJ53YdgZJJYYKmmAznd1caTbcpeBkbdAMFvWfDPAoUQ==", "post"=>{"title"=>"tets", "body"=>"sdfsadf"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/11" for ::1 at 2019-07-08 21:25:32 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:25:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-07-08 21:25:37 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:25:46 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ezn3EB0dO7xY3XBp5arE8EX0LgoNkks4m0pJxjZwY01LUUSQKoXV9m+RKmecwTwkU6piv1yb73uhbd9cPl5Gkg==", "post"=>{"title"=>"hola", "body"=>"ir a hacer la compra"}, "commit"=>"Save Post"}
+Filter chain halted as #<Proc:0x00007f3a8c50ed30@/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:25:46 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ezn3EB0dO7xY3XBp5arE8EX0LgoNkks4m0pJxjZwY01LUUSQKoXV9m+RKmecwTwkU6piv1yb73uhbd9cPl5Gkg==", "post"=>{"title"=>"hola", "body"=>"ir a hacer la compra"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hola"], ["body", "ir a hacer la compra"], ["created_at", "2019-07-08 19:25:46.099848"], ["updated_at", "2019-07-08 19:25:46.099848"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/posts/13
+Completed 302 Found in 19ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/posts/13" for ::1 at 2019-07-08 21:25:46 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:25:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:26:03 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/13" for ::1 at 2019-07-08 21:26:05 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:26:07 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/posts/13" for ::1 at 2019-07-08 21:26:08 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CaaO0BZuHMT6QDBUrbbOA4/S2pOhtd5gcbZYZQLQSPfnxcYkV3W0WHVa+xgjZQNy7+x0cH9/YAMX9F28vW6FQA==", "id"=>"13"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[36mPost Destroy (16.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:26:08 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/posts/12" for ::1 at 2019-07-08 21:26:15 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZXOJa2aIg+RxKsU3mQLecKq0v74GWmKYyHQjZ0C9GreLEMGfJ5MreP4wDnsX0RMByooRXdiQ3PuuNia+/wPXAA==", "id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[36mPost Destroy (11.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 15ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:26:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/posts/11" for ::1 at 2019-07-08 21:26:17 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wGeXahToCB6+sAn/r52k4oEU42yZUz73JyCz3co2pLouBN+eVfOggjGqwrMhTmmT4SpNj0eZgJRBYrYEdYhpDQ==", "id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[36mPost Destroy (10.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:26:17 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-07-08 21:26:18 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:26:24 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IlWvuAyov/Z7IYYAyfWl8nvGYqNhJYP98oDyZd/oJrJ6PRw4OzBRvExt3A6wnl0mbZguFjAsJ77Ip2T/18YDbQ==", "post"=>{"title"=>"test", "body"=>"body test"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["body", "body test"], ["created_at", "2019-07-08 19:26:24.953749"], ["updated_at", "2019-07-08 19:26:24.953749"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 23ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/posts/14" for ::1 at 2019-07-08 21:26:24 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:26:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-07-08 21:26:32 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:26:45 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8GhJWhBj+/v6CmHPveXKGAAqIo9feFeH0CZkxi8ztLSoAPraJ/sVsc1GO8HEjjLMFnRuOg5x88TqAfJcJx2Raw==", "post"=>{"title"=>"comprar", "body"=>"- pan rallado\r\n- leche"}, "commit"=>"Save Post"}
+  [1m[35m (1.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "comprar"], ["body", "- pan rallado\r\n- leche"], ["created_at", "2019-07-08 19:26:45.317707"], ["updated_at", "2019-07-08 19:26:45.317707"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 27ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/posts/15" for ::1 at 2019-07-08 21:26:45 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:26:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/15" for ::1 at 2019-07-08 21:26:48 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/15/edit" for ::1 at 2019-07-08 21:26:49 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/15" for ::1 at 2019-07-08 21:26:57 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P8sUh4IZINyFOYZ83v2sE67Ic8hJOv5V/osoPNyKNipTQbOEuENuHecon44+2NS0/AuSEFbOcOO2HHqCOSpAoA==", "post"=>{"title"=>"comprar", "body"=>"leche"}, "commit"=>"Save Post", "id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+  [1m[36mPost Update (1.3ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "leche"], ["updated_at", "2019-07-08 19:26:57.571809"], ["id", 15]]
+  ↳ app/controllers/posts_controller.rb:31
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 19ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/posts/15" for ::1 at 2019-07-08 21:26:57 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:26:58 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-07-08 21:27:00 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:27:03 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnV7kdhtPX798VAOJtgm3k1mTD9p3XIOhjyHr2r5ygk6HcgR7/XTNMq9CgBfs94KWzgAijjU1k28GxE1Ytfv1g==", "post"=>{"title"=>"eraser", "body"=>"asrsdfasdf"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "eraser"], ["body", "asrsdfasdf"], ["created_at", "2019-07-08 19:27:03.506175"], ["updated_at", "2019-07-08 19:27:03.506175"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 22ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/posts/16" for ::1 at 2019-07-08 21:27:03 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:27:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:27:22 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-07-08 21:27:24 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:27:27 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmj0C4sJuKLNW5aGY4xhd58ELJwJzkgotVGgcvVZek/WAEeLvJFW6PoXzIga55mjiVpgKVjH7GuPdjbo/XdfkA==", "post"=>{"title"=>"asdasdas", "body"=>"dadadasd"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asdasdas"], ["body", "dadadasd"], ["created_at", "2019-07-08 19:27:27.481270"], ["updated_at", "2019-07-08 19:27:27.481270"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to 
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 26.8ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/posts_controller.rb:19:in `create'
+Started POST "/posts" for ::1 at 2019-07-08 21:27:56 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/NN7tJSTdtAXZYDNJUpXQDEhv/fvhPPHS4NaY2auIGVkAUak0nlR89HXU+6RuQsYPooHAF0rax7bAiwMiR1Ng==", "post"=>{"title"=>"asdasdas", "body"=>"dadadasd"}, "commit"=>"Save Post"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asdasdas"], ["body", "dadadasd"], ["created_at", "2019-07-08 19:27:56.730006"], ["updated_at", "2019-07-08 19:27:56.730006"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+Redirected to 
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 18.4ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `to_model' for #<Post::ActiveRecord_Relation:0x00007f3a902ed188>
+Did you mean?  to_xml):
+  
+app/controllers/posts_controller.rb:19:in `create'
+Started GET "/posts/new" for ::1 at 2019-07-08 21:28:11 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 31ms (Views: 21.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for ::1 at 2019-07-08 21:28:15 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ZoDF3HLUtYqG28xhTImoXyIOuhIZl9X2YgGlWE3HP47+UvjMND6SqUBpH0L4evQHLaUC5as4TS/ygNM3onRSQ==", "post"=>{"title"=>"sSASsdasd", "body"=>"sdasdasd"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sSASsdasd"], ["body", "sdasdasd"], ["created_at", "2019-07-08 19:28:15.946044"], ["updated_at", "2019-07-08 19:28:15.946044"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:28:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/posts/19" for ::1 at 2019-07-08 21:28:30 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zcHTXwV88HhgJbr/lWEplVU8i4qQnm7xcd/dqC6PWuQjopurRGdY5O8/cbMbsuTkNQIlaU5U0JIXndhxkTGXUw==", "id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[36mPost Destroy (17.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 24ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:28:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/posts/18" for ::1 at 2019-07-08 21:28:32 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Vn0xllYJ5cttMmLtlJjYRkAVrQdSzAPNwfeT19Eu0vy4HnliFxJNV+IoqaEaSxU3ICsD5IwGva6ntZYObpAfSw==", "id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:8
+  [1m[36mPost Destroy (19.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 22ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/posts" for ::1 at 2019-07-08 21:28:32 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:32:03 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 21:32:16 +0200
+  
+LoadError (cannot load such file -- /home/jupcan/Documentos/github/ruby-test/blog/config/routes.rb):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+activesupport (5.2.3) lib/active_support/dependencies.rb:285:in `block in load'
+activesupport (5.2.3) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.3) lib/active_support/dependencies.rb:285:in `load'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `each'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `load_paths'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:20:in `reload!'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:30:in `block in updater'
+activesupport (5.2.3) lib/active_support/file_update_checker.rb:83:in `execute'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:10:in `execute'
+railties (5.2.3) lib/rails/application/finisher.rb:143:in `block (2 levels) in <module:Finisher>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `instance_exec'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:606:in `block (2 levels) in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `catch'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `block in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:110:in `run!'
+activesupport (5.2.3) lib/active_support/reloader.rb:115:in `run!'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:72:in `block in run!'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:69:in `tap'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:69:in `run!'
+activesupport (5.2.3) lib/active_support/reloader.rb:64:in `run!'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2019-07-08 21:32:17 +0200
+  
+ActiveRecord::NoDatabaseError (No such file or directory @ dir_s_mkdir - /home/jupcan/Documentos/github/ruby-test/blog/db):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:42:in `rescue in sqlite3_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:17:in `sqlite3_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-07-08 21:32:42 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 1.7ms)
+
+
