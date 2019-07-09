@@ -1,4 +1,4 @@
-<h1>edit post</h1>
+<br>
 <%=form_for :post,url: post_path(@post),method: :patch do |k|%>
   <% if @post.errors.any? %>
     <% @post.errors.full_messages.each do |msg| %>
