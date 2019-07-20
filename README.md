@@ -7,9 +7,9 @@ login
 ![login](screenshots/login.jpg)  
 index of notes
 ![index](screenshots/index.jpg)  
+create note
+![create](screenshots/create.jpg) 
 single note
 ![index](screenshots/single.jpg)  
-create note
-![create](screenshots/create.jpg)  
 edit note
 ![edit](screenshots/edit.jpg)  
