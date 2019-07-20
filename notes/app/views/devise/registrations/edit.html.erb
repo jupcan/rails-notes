@@ -1,0 +1,37 @@
+<br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <p>
+    <%=f.label :email%><br>
+    <%=f.email_field :email, :class=>'form-control mr-sm-2', autofocus: true, autocomplete: "email"%>
+  </p>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <p>
+    <%=f.label :password%><a> (leave blank if you don't want to change it)</a><br>
+    <%=f.password_field :password_confirmation, :class=>'form-control mr-sm-2', autocomplete: "new-password"%>
+    <% if @minimum_password_length %>
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </p>
+
+  <p>
+    <%=f.label :password_confirmation%><br>
+    <%=f.password_field :password_confirmation, :class=>'form-control mr-sm-2', autocomplete: "new-password"%>
+  </p>
+
+  <p>
+    <%=f.label :current_password%><a> (to confirm your changes)</a><br>
+    <%=f.password_field :current_password, :class=>'form-control mr-sm-2', autocomplete: "current-passwordd"%>
+  </p>
+
+  <p>
+    <%=f.submit("update", {:class=>'btn btn-outline-info'})%>
+    <%= button_to "cancel my account", registration_path(resource_name), data: { confirm: "are you sure?" }, method: :delete, :class=>'btn btn-outline-info' %>
+  </p>
+<% end %>
+<%= link_to "back", :back %>
