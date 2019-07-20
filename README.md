@@ -1,6 +1,6 @@
 # rails-notes
 [![uclm](https://img.shields.io/badge/personal-project-red.svg?&longCache=true&colorA=27a79a&colorB=555555&style=for-the-badge)](http://www.juanperea.me)  
-tests while learning ruby and simple notes app in rails and bootstrap
+tests while learning ruby and simple notes app in rails+bootstrap
 
 some screenshots running the web app  
 index of notes
